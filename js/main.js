@@ -24,13 +24,19 @@ switch (livello) {
     default:
         alert('Il numero da te inserito non è tra quelli indicati. Ricarica');
         break;
-
 }
 
+var provaComputer = [];
 for (var i = 0; i < 16; i++) {
     numeriComputer[i] = generaRandom(1,difficolta);
+    if (!provaComputer.includes(numeriComputer[i])) {
+        provaComputer.push(numeriComputer[i]);
+    }else {
+        i--;
+    }
 }
 console.log(numeriComputer); //ovviamente da nascondere se si vuole giocare senza barare!
+console.log(provaComputer);
 
 var numeroUtente = [];
 var prova =[];
@@ -52,7 +58,6 @@ for (var x = 0; x < 16; x++) {
         console.log('Il tuo punteggio è di: ' + (numeroUtente.length - 1));
         console.log('Ricarica la pagina per riprovare');
         break;
-
     }
 }
 
