@@ -44,7 +44,7 @@ console.log(provaComputer);
 var numeroUtente = [];
 var prova =[];
 
-for (var x = 0; x < numeroVincita; x++) {
+for (var x = 0; x < numeroVincitaà; x++) {
     numeroUtente[x] = parseInt(prompt('Inserisci un numero tra 1 e ' + difficolta));
     while (numeroUtente[x]<1 || numeroUtente[x]>difficolta) {
         numeroUtente[x]= parseInt(prompt('Il numero inserito non è compreso tra 1 e ' + difficolta + '. Inserisci nuovamente un numero tra 1 e ' + difficolta));
