@@ -7,19 +7,22 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 var numeriComputer = [];
 var livello = parseInt(prompt('Seleziona un livello di difficoltà. Scrivi 0 se vuoi giocare con numeri da 1 a 100, scrivi 1 per numeri da 1 a 80 o scrivi 2 per numeri da 1 a 50'));
 var difficolta;
-
+var numeroVincita;
 while (livello != 0 && livello != 1 && livello !=2) {
     var livello = parseInt(prompt('Il numero da te inserito non è tra quelli indicati. Scrivi 0 se vuoi giocare con numeri da 1 a 100, scrivi 1 per numeri da 1 a 80 o scrivi 2 per numeri da 1 a 50'));
 }
 switch (livello) {
     case 0:
         difficolta = 100;
+        numeroVincita= (difficolta-16);
         break;
     case 1:
         difficolta = 80;
+        numeroVincita= (difficolta-16);
         break;
     case 2:
         difficolta = 50;
+        numeroVincita= (difficolta-16);
         break;
     default:
         alert('Il numero da te inserito non è tra quelli indicati. Ricarica');
@@ -41,7 +44,7 @@ console.log(provaComputer);
 var numeroUtente = [];
 var prova =[];
 
-for (var x = 0; x < 16; x++) {
+for (var x = 0; x < numeroVincita; x++) {
     numeroUtente[x] = parseInt(prompt('Inserisci un numero tra 1 e ' + difficolta));
     while (numeroUtente[x]<1 || numeroUtente[x]>difficolta) {
         numeroUtente[x]= parseInt(prompt('Il numero inserito non è compreso tra 1 e ' + difficolta + '. Inserisci nuovamente un numero tra 1 e ' + difficolta));
